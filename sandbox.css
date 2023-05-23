@@ -210,3 +210,63 @@
     color: white;
     border-right-style: none;
 }
+
+.animated-button-1 {
+    position: relative;
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    background-color: #00b3b4;
+
+    background-image: url(pattern.png);
+    background-size: 40px 40px;
+    border: solid 1px #555;
+    color: white;
+    transition: all ease 0.3s;
+}
+
+.animated-button-1:hover {
+    animation: loading-button-animation 2s linear infinite;
+
+}
+
+@keyframes loading-button-animation {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 40px 0;
+    }
+}
+
+.animated-button-2 {
+    position: relative;
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    background-color: #00b3b4;
+
+    background-image: url(pattern.png);
+    background-size: 40px 40px;
+    border: solid 1px #555;
+    color: white;
+    transition: all ease 0.3s;
+}
+
+.animated-button-2::after {
+    position: absolute;
+    /* top: 50%; */
+    right: 0.6rem;
+    content: ">>";
+    transition: all ease 0.3s;
+    opacity: 0;
+}
+
+.animated-button-2:hover {
+    padding: 20px 60px 20px 20px;
+}
+
+.animated-button-2:hover::after {
+    opacity: 1;
+}
