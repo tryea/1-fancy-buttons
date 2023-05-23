@@ -320,5 +320,57 @@
     left: 5px;
     right: unset;
     color: #00b3b4;
+}
 
+.toggle-2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 0 0;
+}
+
+.toggle-2__input {
+    display: none;
+}
+
+.toggle-2__button {
+    position: relative;
+    display: inline-block;
+    line-height: 20px;
+    text-transform: uppercase;
+    background: white;
+    color: #aaa;
+    border: solid 1px #ccc;
+    padding: 5px 10px 5px 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.toggle-2__button::before {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #ccc;
+    content: "";
+    transition: all 0.3s ease;
+    border-radius: 25%;
+}
+
+.toggle-2__input:checked+.toggle-2__button {
+    background: #00b3b4;
+    border-color: #00b3b4;
+    color: white;
+}
+
+.toggle-2__input:checked+.toggle-2__button::before {
+    background-color: white;
+    content: 'x';
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10px;
+    color: #00b3b4;
 }
