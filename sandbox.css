@@ -270,3 +270,55 @@
 .animated-button-2:hover::after {
     opacity: 1;
 }
+
+.toggle-1 {
+    font-family: Helvetica, Arial, sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 0 0;
+}
+
+.toggle-1__input {
+    display: none;
+}
+
+.toggle-1__button {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 20px;
+    text-transform: uppercase;
+    background-color: #F2395A;
+    border: solid 1px #F2395A;
+    color: white;
+    width: 80px;
+    height: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.toggle-1__button::before {
+    position: absolute;
+    top: 4.8px;
+    right: 5px;
+    content: "off";
+    display: inline-block;
+    height: 20px;
+    padding: 0 4px;
+    background: white;
+    color: #F2395A;
+    transition: all 1s ease;
+}
+
+.toggle-1__input:checked+.toggle-1__button {
+    background-color: #00b3b4;
+    border: solid 1px #00b3b4;
+}
+
+.toggle-1__input:checked+.toggle-1__button::before {
+    content: "on";
+    left: 5px;
+    right: unset;
+    color: #00b3b4;
+
+}
