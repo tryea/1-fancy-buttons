@@ -31,4 +31,17 @@
 }
 
 
-.facebook-style-light {}
+.facebook-style-light {
+    background: #F6F7F9;
+    border: solid 1px #ced0d4;
+    color: #4b4f56;
+}
+
+.facebook-style-light:hover {
+    background: #e9ebee;
+}
+
+.facebook-style-light:active {
+    background-color: #d8dade;
+    border-color: #d8dade;
+}
